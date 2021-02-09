@@ -1,17 +1,24 @@
 $(window).on('load', function(){
 
-    $('#docbtn').on('click', function(){
-        openInfo(event, 'docs')
+    $('#homebtn').on('click', function(){
+        openInfo(event, 'home')
     })
 
-    $('#picbtn').on('click', function(){
-        openInfo(event, 'pics')
+    $('#doc1btn').on('click', function(){
+        openInfo(event, 'docs-1')
     })
 
-    $('#linkbtn').on('click', function(){
-        openInfo(event, 'links')
+    $('#pic1btn').on('click', function(){
+        openInfo(event, 'pics-1')
     })
 
+    $('#doc2btn').on('click', function(){
+        openInfo(event, 'docs-2')
+    })
+
+    $('#pic2btn').on('click', function(){
+        openInfo(event, 'pics-2')
+    })
 })
 
 function openInfo(evt, tabname) {
