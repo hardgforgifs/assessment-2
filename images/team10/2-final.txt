@@ -1,0 +1,169 @@
+@startgantt
+
+<style>
+ganttDiagram {
+    task {
+        BackGroundColor GreenYellow
+    }
+        note {
+                FontSize 14
+                FontStyle Bold
+        }
+}
+</style>
+
+title Pixel Boat Development - Team 100 / Team 10
+Project starts 2020-10-08
+2020-11-25 is colored Crimson
+2021-02-10 is colored Crimson
+
+[Assessment 1 deadline] happens 2020-11-25
+[Team Introduction] happens 2020-10-08
+[Team Introduction] displays on same row as [Assessment 1 deadline]
+
+[Assessment 2 requirements] happens on 2020-12-04
+[Assessment 2 requirements] displays on same row as [Assessment 1 deadline]
+[Assessment 2 deadline] happens 2021-02-10
+[Assessment 2 deadline] displays on same row as [Assessment 1 deadline]
+
+2020/12/25 to 2021/01/10 are colored in lightblue
+[Holiday and exam season] happens 2020-12-25
+[Holiday and exam season] displays on same row as [Assessment 1 deadline]
+
+2020-11-26 to 2020-12-6 are colored in lightblue
+
+
+--Requirements Elicitation--
+[Make up interview questions] as [M] lasts 5 days and starts at 2020-10-08
+note bottom
+High Priority
+end note
+[Interview] happens at [M]'s end
+then [Gathered requirements into a table] starts 1 day after [M]'s end and ends 2020-10-15
+[Writing up Req1.pdf] starts at [M]'s end and ends at 2020-10-22
+[Req1.pdf] happens 2020-10-22
+[Formatting updates] happens at 2020-11-19
+[Formatting updates] displays on same row as [Req1.pdf]
+
+[Requirements documentation update] starts 2020-12-10 and ends 2020-12-21
+[Edge requirements update] starts 2021-01-26 and ends 2021-02-03
+[Edge requirements update] displays on same row as [Requirements documentation update]
+
+--Implementation--
+[Implementation] starts 2020-10-27 and ends 2020-11-19
+note bottom
+High Priority
+end note
+[Writing up Impl1.pdf] starts 3 day before [Implementation]'s end and lasts 3 days
+[Impl1.pdf] happens at [Writing up Impl1.pdf]'s end
+[First Prototype] happens 2020-10-27
+[Added Obstacles] happens 2020-10-29
+[Added Timings & Animations] happens 2020-11-02
+[First AI & Texture Updates] happens 2020-11-05
+[Results Screen added] happens 2020-11-14
+[Additional Legs & Boat Selection added] happens 2020-11-15
+[PixelBoat Alpha 0.0.4 release] happens at 2020-11-19
+
+[Implementation stretch 1] starts 2020-12-10 and ends 2020-12-23
+note bottom
+Medium Priority
+end note
+[Implementation stretch 2] starts 2021-01-15 and ends 2021-02-09
+[Implementation stretch 2] displays on same row as [Implementation stretch 1]
+note bottom
+High Priority
+end note
+
+[PixelBoat 1.0.0 release] happens at 2021-02-02
+[Pixelboat 1.0.1 release] happens at 2021-02-09
+
+--Website--
+[Website development] as [W] lasts 2 days and starts 2020-10-29
+note bottom
+Low Priority
+end note
+[Website base completed] as [Wa] happens at [W]'s end
+[Website updated with plan] as [Wb] happens at 2020-11-16
+[Wa] displays on same row as [Wb]
+
+[Testing pages] lasts 8 days and starts 2021-02-01
+
+[Assessment 2 documents added] lasts 2 days and starts 2021-02-04
+[Assessment 1 updated documents added] lasts 2 days and starts 2021-02-03
+[Executable added] happens 2021-02-08
+
+--Planning & Method Selection--
+[Assigning tasks on Trello.com] starts 2020-10-15 and ends 2020-11-09
+note bottom
+Medium Priority
+end note
+[Writing up Plan1.pdf] starts 11 days before [Assigning tasks on Trello.com]'s end and ends 2020-11-16
+[Working on Gantt Diagram] starts 12 days before [Writing up Plan1.pdf]'s end and ends 2020-11-21
+[Plan1.pdf] happens at [Working on Gantt Diagram]'s end
+
+[Gantt chart sprint #1] starts 2020-12-13 and ends 2020-12-23
+note bottom
+Low Priority
+end note
+[Gantt chart sprint #2] starts 2021-01-12 and ends 2021-02-09
+[Gantt chart sprint #2] displays on same row as [Gantt chart sprint #1]
+note bottom
+Low Priority
+end note
+
+--Risk Assessment--
+[Writing up Risk1.pdf] starts 2020-11-02 and ends 2020-11-16
+[Gathered risks into a table] starts 14 days before [Writing up Risk1.pdf]'s end and ends 2020-11-12
+note bottom
+Medium Priority
+end note
+[Risk1.pdf] happens at [Writing up Risk1.pdf]'s end
+
+[Risk documentation update] starts 2020-12-10 and ends 2020-12-19
+note bottom
+Medium Priority
+end note
+
+--Architecture--
+[Abstract Architecture] as [A] starts 2020-10-22 and ends 2020-10-26
+note bottom
+High Priority
+end note
+[Concrete Architecture] as [C] starts 12 days after [A]'s end and ends 2020-11-16
+[UML Diagram] starts at [C]'s start and ends 2020-11-16
+[Writing up Arch1.pdf] starts 3 days before [UML Diagram]'s end and ends 2020-11-21
+[Arch1.pdf] happens at [Writing up Arch1.pdf]'s end
+
+[Architecture documentation update #1] starts 2020-12-15 and ends 2020-12-23
+note bottom
+Medium priority
+end note
+[Architecture documentation update #2] starts 2021-01-15 and ends 2021-02-03
+note bottom
+High Priority
+end note
+[Architecture documentation update #2] displays on same row as [Architecture documentation update #1]
+
+--Change Report--
+[Change Report sprint #1] starts 2020-12-15 and ends 2020-12-20
+note bottom
+High Priority
+end note
+[Change Report sprint #2] starts 2021-01-14 and ends 2021-02-05
+[Change Report sprint #1] displays on same row as [Change Report sprint #2]
+note bottom
+High Priority
+end note
+
+--Continuous Integration Report--
+[CI deployment website] starts 2021-01-20 and ends 2021-02-10
+[CI deployment game] starts 2021-01-27 and ends 2021-02-10
+
+--Testing--
+[Manual tests] starts 2020-12-15 and lasts 8 days
+[Unit tests] starts 2021-01-11 and lasts 30 days
+[Unit tests] displays on same row as [Manual tests]
+
+[Report] starts 2021-01-27 and lasts 14 days
+
+@endgantt
