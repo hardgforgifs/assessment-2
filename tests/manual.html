@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dragon Boat Racing 2022 by Team 100/Team 10</title>
+        <meta charset="utf-8" />
+        <link rel="icon" href= />
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,600;1,300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link href="../styles.css" rel="stylesheet" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="top-container">
+            <img src="../images/new_logo_t.png" alt="Team 100 Logo" id="logo" />
+
+            <div id="top-info">
+                ENG1 Cohort 2 Team 12/10 Project Website
+            </div>
+        </div>
+       
+        <div class="nav">
+            <ul>
+                <li class="navlinks"><a href="../">Back to Home</a></li>
+                <li class="navlinks"><a href="../tests"><b>Testing</b></a></li>
+                <li class="navlinks"><a href="unit/">Unit</a></li>
+                <li class="navlinks active"><a href="manual.html">Manual</a></li>
+                <li class="navlinks"><a href="manual-evidence.html">Manual Evidence</a></li>
+                <li class="navlinks"><a href="traceability-matrix.html">Traceability Matrix</a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+
+            <div class="section" id="home">
+
+                <h1>Blackbox Testing</h1>
+                <p>
+                    For a better and more accessible view, please view in <a href="https://docs.google.com/spreadsheets/d/11VdLNkYtWiSY9xhVw2PJ4qpFx-hHbfKOJRA2b46zFjk/edit?usp=sharing">Google Sheets</a>.
+                </p>
+                <div class="table-container">
+                    <table class="table table-bordered table-hover table-condensed">
+                        <thead><tr><th title="Field #1">TestID</th>
+                        <th title="Field #2">Requirements</th>
+                        <th title="Field #3">Inputs</th>
+                        <th title="Field #4">Expected Output</th>
+                        <th title="Field #5">Actual output</th>
+                        <th title="Field #6">Pass/Fail</th>
+                        <th title="Field #7">Rationale</th>
+                        <th title="Field #8">Steps</th>
+                        <th title="Field #9">Author</th>
+                        </tr></thead>
+                        <tbody><tr>
+                        <td>1.0.1</td>
+                        <td>UR_PLAYABILITY,<br/>FR_CONROL</td>
+                        <td>Moving boat in a new game</td>
+                        <td>W accelerates, A turns left, D turns right</td>
+                        <td>As expected</td>
+                        <td>Pass</td>
+                        <td>This is the only way we can test if inputs are working</td>
+                        <td>Select “New Game” and once the game starts, press W, A and D to test inputs</td>
+                        <td>Dragos Stoican</td>
+                        </tr>
+                        <tr>
+                        <td>1.0.2</td>
+                        <td>UR_BOAT_SPECS,<br/>FR_STATS</td>
+                        <td>Boats in the selection screen</td>
+                        <td>In the selection screen, each boat should have different stats</td>
+                        <td>As expected</td>
+                        <td>Pass</td>
+                        <td>Testing the boat specs can be done by comparing the boats in the selection screen</td>
+                        <td>Select “New Game”, hover over each boat to check the difference in stats</td>
+                        <td>Dragos Stoican</td>
+                        </tr>
+                        <tr>
+                        <td>1.0.3</td>
+                        <td>UR_TIRED_OVER_TIME</td>
+                        <td>Boat at the end of the leg</td>
+                        <td>At the end of the leg, the reduced speed, acceleration and stamina should be noticeable</td>
+                        <td>As expected</td>
+                        <td>Pass</td>
+                        <td>Reaching the later stages of a leg should test if this requirement is met</td>
+                        <td>Select “New Game”, start the game with any boat, compare stats as leg progresses</td>
+                        <td>Dragos Stoican</td>
+                        </tr>
+                        <tr>
+                        <td>1.0.4</td>
+                        <td>UR_LANE_PENALTY,<br/>FR_PENALTIES,<br/>FR_PEN_NOTIF</td>
+                        <td>Boat outside the lane</td>
+                        <td>The player should see the penalty added notification next to the current leg time</td>
+                        <td>As expected</td>
+                        <td>Pass</td>
+                        <td>Leading the boat out of the lane should induce penalties so we can test this requirement</td>
+                        <td>Select “New Game”, start the game with any boat, move the boat outside it’s lane with W, A and D</td>
+                        <td>Dragos Stoican</td>
+                        </tr>
+                        <tr>
+                        <td>1.0.5</td>
+                        <td>UR_OBSTACLES,<br/>FR_OBSTACLE_CLUTTER<br/>FR_OBSTACLE</td>
+                        <td>New game started</td>
+                        <td>There are obstacles on the map</td>
+                        <td>As expected</td>
+                        <td>Pass</td>
+                        <td>To see if there are obstacles on the map we just have to start a game</td>
+                        <td>Select “New Game”, start the game with any boat, look for obstacles</td>
+                        <td>Dragos Stoican</td>
+                        </tr>
+                        <tr>
+                        <td>1.0.6</td>
+                        <td>UR_COLLISONS<br/>FR_HIT_OBSTACLE</td>
+                        <td>Boat collided with a obstacle</td>
+                        <td>The robustness and speed of the boat should decrease</td>
+                        <td>As expected</td>
+                        <td>Pass</td>
+                        <td>Colliding with the objects in the river is how we test if they have the expected behaviour</td>
+                        <td>Select “New Game”, start the game with any boat, move the boat into an obstacle and watch the durability decrease</td>
+                        <td>Dragos Stoican</td>
+                        </tr>
+                        <tr>
+                        <td>1.0.7</td>
+                        <td>UR_COLLISIONS<br/>FR_HIT_OBSTACLE</td>
+                        <td>Boat with low robustness collided with an obstacle</td>
+                        <td>Once the robustness hits 0, the boat crashes and the leg ends for the player</td>
+                        <td>As expected</td>
+                        <td>Pass</td>
+                        <td>Colliding with objects until there’s no health left will test how the game behaves when the player crashes</td>
+                        <td>Select “New Game”, start the game with any boat, crash into obstacles until durability depletes completely</td>
+                        <td>Dragos Stoican</td>
+                        </tr>
+                        <tr>
+                        <td>1.0.8</td>
+                        <td>UR_LEG_DIFFICULTY</td>
+                        <td>Start of a new leg after finishing the first leg</td>
+                        <td>The number of obstacles, as well as their speed increases after each leg</td>
+                        <td>As expected</td>
+                        <td>Pass</td>
+                        <td>We go through the legs and test the number of obstacles, as well as their movement speed</td>
+                        <td>Select “New Game”, start the game with any boat, finish some legs and note the increasing speed and amount of obstacles</td>
+                        <td>Dragos Stoican</td>
+                        </tr>
+                        <tr>
+                        <td>1.0.9</td>
+                        <td>UR_LEGS,<br/>FR_LEGS</td>
+                        <td>Finishing legs</td>
+                        <td>The game should end after 3 legs and 1 final</td>
+                        <td>As expected</td>
+                        <td>Pass</td>
+                        <td>Going through the legs will test if there actually are 3 legs and a final</td>
+                        <td>Select “New Game”, start the game with any boat, go through the legs</td>
+                        <td>Dragos Stoican</td>
+                        </tr>
+                        <tr>
+                        <td>1.0.10</td>
+                        <td>UR_BOATS_NO,<br/>FR_BOAT_NO</td>
+                        <td>Reach the final</td>
+                        <td>The number of boats in the final is smaller than the other legs</td>
+                        <td>As expected</td>
+                        <td>Pass</td>
+                        <td>Reaching the final and counting the boats will test if the nr of boats in the final is lower than the other legs</td>
+                        <td>Select “New Game”, start the game with any boat, reach the final</td>
+                        <td>Dragos Stoican</td>
+                        </tr>
+                        <tr>
+                        <td>1.0.11</td>
+                        <td>UR_INFO_DISPLAY,<br/>FR_UI</td>
+                        <td>New game started</td>
+                        <td>The UI should display the position in race, distance to go, speed, acceleration, stamina, damage</td>
+                        <td>Only stamina and durability is displayed</td>
+                        <td>Fail</td>
+                        <td>Starting a game and checking the UI will test this requirement</td>
+                        <td>Select “New Game”, start the game with any boat, check the UI to see if all the info is being displayed</td>
+                        <td>Dragos Stoican</td>
+                        </tr>
+                        <tr>
+                        <td>1.0.12</td>
+                        <td>UR_DIFFICULTY<br/>FR_DIFFICULTY_EFFECT<br/>FR_STAM_REGEN</td>
+                        <td>Moving boat in a game</td>
+                        <td>The time before the stamina starts regenerating must differ based on the difficulty</td>
+                        <td>As expected</td>
+                        <td>Pass</td>
+                        <td>Waiting for the stamina to start regenerating will verify if the time is based on difficulty</td>
+                        <td>Select “New Game”, start the game with any boat, check the time before stamina start regenerating, repeat on harder difficulty</td>
+                        <td>Dragos Stoican</td>
+                        </tr>
+                        <tr>
+                        <td>1.0.13</td>
+                        <td>UR_PAUSE_MENU</td>
+                        <td>Pausing the game</td>
+                        <td>The boats top moving, the time stops moving and the “Save&amp;Quit” button appears</td>
+                        <td>As expected</td>
+                        <td>Pass</td>
+                        <td>Starting a game and pressing the pause button “p” will test this requirement</td>
+                        <td>Select “New Game”, start the game with any boat, after racing for any amount of time press “p” to pause the game</td>
+                        <td>Dragos Stoican</td>
+                        </tr>
+                        <tr>
+                        <td>1.0.14</td>
+                        <td>UR_PAUSE_MENU</td>
+                        <td>Resuming the game</td>
+                        <td>The game unpauses, with the boats moving again at the same velocity. The time continues from where it was paused</td>
+                        <td>As expected</td>
+                        <td>Pass</td>
+                        <td>Unpausing the game will test if the game correctly resumes after being paused for a while</td>
+                        <td>Select “New Game”, start the game with any boat, after racing for any amount of time, pause, wait for a bit, then click “Resume Game”</td>
+                        <td>Dragos Stoican</td>
+                        </tr>
+                        <tr>
+                        <td>1.0.15</td>
+                        <td>UR_SAVE_GAME, UR_LOAD_GAME,<br/>FR_SAVE,<br/>FR_LOAD</td>
+                        <td>Saving a game from the pause menu</td>
+                        <td>The game should resume to the exact same state it was in when it was saved.</td>
+                        <td>As expected</td>
+                        <td>Pass</td>
+                        <td>Saving and loading the game will test these requirements. The game state after loading needs to be carefully checked to be identical with the saved state</td>
+                        <td>Select “New Game”, start the game with any boat, after racing for a any amount of time, pause, click “Save&amp;Quit” then click “Load Game” from the main menu. Compared the loaded game state with the saved one.</td>
+                        <td>Dragos Stoican</td>
+                        </tr>
+                        <tr>
+                        <td>1.0.16</td>
+                        <td>UR_PICKUP_BOOST,<br/>FR_RANDOM_BOOST,<br/>FR_BOOST_DURATION</td>
+                        <td>Colliding with a pickup during the race</td>
+                        <td>The boat should be affected by either a speed boost, a durability boost, a stamina boost, a maneuverability boost or an invincibility boost. The current effects should be displayed on the UI. Boosts don’t last longer than 5 seconds</td>
+                        <td>As expected</td>
+                        <td>Pass</td>
+                        <td>Colliding with the boosts will test if they work as expected</td>
+                        <td>Select “New Game”, start the game with any boat, look for and steer into any pickup boost. Note the difference in the boat stats, the UI update displaying the current effects.</td>
+                        <td>Dragos Stoican</td>
+                        </tr>
+                        <tr>
+                        <td>1.0.17</td>
+                        <td>FR_STAM_USAGE,<br/>FR_STAM_REGEN</td>
+                        <td>Accelerating boat in a race</td>
+                        <td>The stamina should decrease when accelerating and regenerate when not accelerating</td>
+                        <td>As expected</td>
+                        <td>Pass</td>
+                        <td>Alternating between acceleration and not accelerating will test these requirements</td>
+                        <td>Select “New Game”, start the game with any boat, accelerate, stop accelerating, wait a bit, repeat</td>
+                        <td>Dragos Stoican</td>
+                        </tr>
+                        <tr>
+                        <td>1.0.18</td>
+                        <td>FR_MOVING_OBSTACLES</td>
+                        <td>New game started</td>
+                        <td>Some obstacles should be moving slightly</td>
+                        <td>As expected</td>
+                        <td>Pass</td>
+                        <td>We can check this by just starting a new game and looking at obstacles</td>
+                        <td>Select “New Game”, start the game with any boat, check to see if any obstacles are moving</td>
+                        <td>Dragos Stoican</td>
+                        </tr>
+                        <tr>
+                        <td>1.0.19</td>
+                        <td>FR_TUTORIAL</td>
+                        <td>New game started</td>
+                        <td>The tutorial screen should appear before the game starts</td>
+                        <td>As expected</td>
+                        <td>Pass</td>
+                        <td>The tutorial screen is present at the beginning of every game</td>
+                        <td>Select “New Game’, start the game with any boat, check if tutorial screen appears</td>
+                        <td>Dragos Stoican</td>
+                        </tr>
+                        <tr>
+                        <td>1.0.20</td>
+                        <td>FR_POV</td>
+                        <td>Moving boat in a race</td>
+                        <td>The boat should stay centered on the screen</td>
+                        <td>As expected</td>
+                        <td>Pass</td>
+                        <td>Moving the boat will test if the requirement is met</td>
+                        <td>Select “New Game’, start the game with any boat, move left, right and forward</td>
+                        <td>Dragos Stoican</td>
+                        </tr>
+                        <tr>
+                        <td>1.0.21</td>
+                        <td>UR_ENEMY_BOATS,<br/>FR_AI</td>
+                        <td>New game started</td>
+                        <td>The AI should be dodging obstacles and staying within its lane</td>
+                        <td>As expected</td>
+                        <td>Pass</td>
+                        <td>We have to watch the AI perform in the race to test this requirement</td>
+                        <td>Select “New Game’, start the game with any boat, watch the AI’s behaviour</td>
+                        <td>Dragos Stoican</td>
+                        </tr>
+                        <tr>
+                        <td>1.0.22</td>
+                        <td>UR_SETTINGS<br/>FR_CHANGE_VOLUME</td>
+                        <td>Moving sliders in settings screen</td>
+                        <td>The volume should be affected by the sliders</td>
+                        <td>As expected</td>
+                        <td>Pass</td>
+                        <td>Moving the sliders is how the volume is changed</td>
+                        <td>Select “options”, move the sliders</td>
+                        <td>Dragos Stoican</td>
+                        </tr>
+                        <tr>
+                        <td>1.0.23</td>
+                        <td>UR_RESULTS</td>
+                        <td>Ended leg</td>
+                        <td>The results should be displayed on the screen in order of best to worst</td>
+                        <td>As expected</td>
+                        <td>Pass</td>
+                        <td>Reaching the end of the leg cause the result screen to appear</td>
+                        <td>Select “New Game’, start the game with any boat, finish a leg</td>
+                        <td>Dragos Stoican</td>
+                        </tr>
+                        <tr>
+                        <td>1.0.24</td>
+                        <td>UR_ENEMY_BOATS<br/>FR_AI_VAIETY</td>
+                        <td>New game started</td>
+                        <td>The type of boats that the AI uses should b randomised</td>
+                        <td>As expected</td>
+                        <td>Pass</td>
+                        <td>This input tests if the AI varies or not</td>
+                        <td>Select “New Game’, start the game with any boat</td>
+                        <td>Dragos Stoican</td>
+                        </tr>
+                        <tr>
+                        <td>1.0.25</td>
+                        <td>FR_MULTIPLE_BOOST</td>
+                        <td>Boat colliding with multiple pickups</td>
+                        <td>The effects should stack on the boat as we collide with pickups, and all effects should be applied at once</td>
+                        <td>As expected</td>
+                        <td>Pass</td>
+                        <td>We need to collect multiple pickups to test if they all work at the same time</td>
+                        <td>Select “New Game”, start the game with any boat, collide with multiple pickups in a short amount of time</td>
+                        <td>Dragos Stoican</td>
+                        </tr>
+                        <tr>
+                        <td>1.0.26</td>
+                        <td>FR_BOAT_ASPECT</td>
+                        <td>New game started</td>
+                        <td>The aspect of the boat in the race should be the same as the one in the selection screen</td>
+                        <td>As expected</td>
+                        <td>Pass</td>
+                        <td>We need to start a game to see if this requirement is met</td>
+                        <td>Select “New Game”, start the game with any boat, check if the aspect of the boat matches the one chosen in the selection screen</td>
+                        <td>Dragos Stoican</td>
+                        </tr>
+                        <tr>
+                        <td>1.0.27</td>
+                        <td>FR_STAM_DEPLETED</td>
+                        <td>Boat with no stamina left</td>
+                        <td>When out of stamina, boat shouldn’t be able to accelerate until most of the stamina replenishes</td>
+                        <td>As expected</td>
+                        <td>Pass</td>
+                        <td>Input tests if the requirement is met when the boat has no stamina left</td>
+                        <td>Select “New Game”, start the game with any boat, accelerate until out of stamina</td>
+                        <td>Dragos Stoican</td>
+                        </tr>
+                        <tr>
+                        <td>1.0.28</td>
+                        <td>UR_DIFFICULTY<br/>FR_DIFFICULTY_SELECTION</td>
+                        <td>Clickable buttons in boat selection screen</td>
+                        <td>Clicking the buttons should show that the difficulty is changing by changing the aspect of the button</td>
+                        <td>As expected</td>
+                        <td>Pass</td>
+                        <td>We can test if the change is represented by the buttons</td>
+                        <td>Select “New Game”, click the difficulty buttons to see if the input is registred</td>
+                        <td>Dragos Stoican</td>
+                        </tr>
+                        </tbody></table>
+                </div>
+            </div>
+
+        </div>
+
+        
+    </div>
+
+    </body>
+</html>
